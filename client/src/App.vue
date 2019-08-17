@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Slider from "@/components/test-slider.vue";
+import Slider from "@/components/testSlider.vue";
 
 export default {
   name: "app",
