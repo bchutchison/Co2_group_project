@@ -12,8 +12,8 @@
 
       <!-- remember to set v-model -->
     <!-- <div class="output-wrapper">
-      <!- <p>{{ (parseInt(slider) * this.emissions[2].calcValue + parseInt(slider2)).toFixed(2) }}</p> -->
-    <!-- </div> -->
+      <p>{{parseInt(slider)}}</p>
+    </div> -->
 
   </div>
 </template>

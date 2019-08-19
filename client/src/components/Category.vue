@@ -1,15 +1,13 @@
 <template lang="html">
   <div class="">
-    <ul v-for="category in emission">
       <li>{{emission.category}}</li>
       <div class="question-topic">
         <ul v-for="data in emission.data">
          <li>{{data.name}}</li>
          <slider-incremental :values="data.sliderValues" v-if="!data.isSmoothSlider">Test If v-if works</slider-incremental>
-         <slider-smooth :values="data.sliderValues">Test If v-if works</slider-smooth>
+         <slider-smooth v-else :values="data.sliderValues">Test If v-if works</slider-smooth>
         </ul>
       </div>
-    </ul>
   </div>
 </template>
 
