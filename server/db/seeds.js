@@ -10,7 +10,7 @@ db.emissions.insertMany(
       data: [
         {
           name: "Food sourced locally",
-          sliderType: false,
+          isSmoothSlider: false,
           sliderValues: [
             {
               label: "very little",
@@ -32,7 +32,7 @@ db.emissions.insertMany(
         },
         {
           name: "Food waste",
-          sliderType: false,
+          isSmoothSlider: false,
           sliderValues: [
             {
               label: "very little",
@@ -54,7 +54,7 @@ db.emissions.insertMany(
         },
         {
           name: "Days per week consuming meat & dairy",
-          sliderType: false,
+          isSmoothSlider: false,
           sliderValues: [
             {
               label: "One",
@@ -94,7 +94,7 @@ db.emissions.insertMany(
       data: [
         {
           name: "Yearly Electricity use (kWh)",
-          sliderType: true,
+          isSmoothSlider: true,
           calcValue: 0.309,
           bottomValue: "0",
           topValue: "5000",
@@ -102,14 +102,14 @@ db.emissions.insertMany(
         },
         {
           name: "Yearly Gas use (kWh)",
-          sliderType: true,
+          isSmoothSlider: true,
           calcValue: 0.185,
           bottomValue: "0",
           topValue: "30000",
         },
         {
           name: "Recycling",
-          sliderType: false,
+          isSmoothSlider: false,
           sliderValues: [
             {
               label: "very little",
@@ -137,21 +137,21 @@ db.emissions.insertMany(
       data: [
         {
           name: "Flights hours per year",
-          sliderType: true,
+          isSmoothSlider: true,
           calcValue: 134,
           bottomValue: "0",
           topValue: "50",
         },
         {
           name: "Car journey miles per year",
-          sliderType: true,
+          isSmoothSlider: true,
           calcValue: 0.43,
           bottomValue: "0",
           topValue: "25000",
         },
         {
           name: "Public transport miles per week",
-          sliderType: true,
+          isSmoothSlider: true,
           calcValue: 5.2,
           bottomValue: "0",
           topValue: "500",
