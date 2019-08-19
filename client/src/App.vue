@@ -4,7 +4,8 @@
     <slider-grid :emissions="emissions" />
     <p v-for="emission in emissions">{{emission.name}}</p>
     <p>{{this.emissions[1].name}}</p> -->
-    <category :emissions="emissions" />
+    <category v-for="emission in this.emissions"
+    :emission="emission"></category>
   </div>
 </template>
 

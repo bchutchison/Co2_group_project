@@ -3,8 +3,8 @@
 
     <div class="slider-wrapper">
       <slider
-      :min="100"
-      :max="200"
+      :min="this.values.min"
+      :max="this.values.max"
       raising
       v-model="slider"
       ></slider>
@@ -27,31 +27,31 @@
       Slider
     },
 
-    props: ["emissions"],
+    props: ["values"],
 
     data() {
       return {
         emissions: "",
         slider: "0",
-        sliderValues: [
-          {
-            label: this.emissions[0].sliderValues[0].label,
-            value: this.emissions[0].sliderValues[0].value
-          },
-          {
-            label: this.emissions[0].sliderValues[1].label,
-            value: this.emissions[0].sliderValues[1].value
-          },
-          {
-            label: this.emissions[0].sliderValues[2].label,
-            value: this.emissions[0].sliderValues[2].value
-          },
-          {
-            label: this.emissions[0].sliderValues[3].label,
-            value: this.emissions[0].sliderValues[3].value
-          }
-
-        ],
+        // sliderValues: [
+        //   {
+        //     label: this.emissions[0].sliderValues[0].label,
+        //     value: this.emissions[0].sliderValues[0].value
+        //   },
+        //   {
+        //     label: this.emissions[0].sliderValues[1].label,
+        //     value: this.emissions[0].sliderValues[1].value
+        //   },
+        //   {
+        //     label: this.emissions[0].sliderValues[2].label,
+        //     value: this.emissions[0].sliderValues[2].value
+        //   },
+        //   {
+        //     label: this.emissions[0].sliderValues[3].label,
+        //     value: this.emissions[0].sliderValues[3].value
+        //   }
+        //
+        // ],
 
 
         // slider2Values: [

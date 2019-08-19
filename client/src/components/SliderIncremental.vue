@@ -5,9 +5,9 @@
     <div class="slider-wrapper">
 <!-- slider values should be populated through the accessing empty emissions array  -->
       <slider
-      :values="sliderValues"
+      :values="values"
       raising
-      v-model="slider2"
+      v-model="slider"
       ></slider>
     </div>
       <!-- remember to set v-model -->
@@ -27,7 +27,7 @@
       Slider
     },
 
-    props: ["emissions"],
+    props: ["values"],
 
     data() {
       return {
@@ -35,8 +35,8 @@
         slider: "0",
         sliderValues: [
           {
-            label: this.emissions[0].sliderValues[0].label,
-            value: this.emissions[0].sliderValues[0].value
+            label: "Hello",
+            value: "5"
           },
           {
             label: this.emissions[0].sliderValues[1].label,
