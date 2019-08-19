@@ -1,15 +1,17 @@
 <template lang="html">
   <div id="app">
-    <slider></slider>
+    <!-- <slider></slider>
     <slider-grid :emissions="emissions" />
     <p v-for="emission in emissions">{{emission.name}}</p>
-    <p>{{this.emissions[1].name}}</p>
+    <p>{{this.emissions[1].name}}</p> -->
+    <category :emissions="emissions" />
   </div>
 </template>
 
 <script>
 import Slider from "@/components/TestSlider.vue";
 import TestSlider from "@/components/TestSlider.vue";
+import Category from "@/components/Category.vue";
 
 export default {
   name: "app",
@@ -22,7 +24,8 @@ export default {
 
   components: {
     'slider': Slider,
-    'slider-grid': TestSlider
+    'slider-grid': TestSlider,
+    'category': Category
   },
 
   mounted(){

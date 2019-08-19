@@ -6,7 +6,7 @@ db.dropDatabase();
 db.emissions.insertMany(
   [
     {
-      name: "food",
+      category: "food",
       data: [
         {
           name: "Food sourced locally",
@@ -90,7 +90,7 @@ db.emissions.insertMany(
     },
 
     {
-      name: "housing",
+      category: "housing",
       data: [
         {
           name: "Yearly Electricity use (kWh)",
@@ -133,7 +133,7 @@ db.emissions.insertMany(
     },
 
     {
-      name: "transport",
+      category: "transport",
       data: [
         {
           name: "Flights hours per year",
