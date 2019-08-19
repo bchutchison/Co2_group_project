@@ -6,8 +6,7 @@
       :min="this.values.min"
       :max="this.values.max"
       raising
-      v-model="slider"
-      ></slider>
+      v-model="slider" v-on:change="handleChange"></slider>
     </div>
 
       <!-- remember to set v-model -->
@@ -21,6 +20,7 @@
 <script>
   import Slider from "vue-custom-range-slider";
   import "vue-custom-range-slider/dist/vue-custom-range-slider.css";
+  import {eventBus} from "../main.js";
 
   export default {
     components: {
@@ -29,53 +29,15 @@
 
     props: ["values"],
 
+    methods: {
+    handleChange(){
+      eventBus.$emit('value-selected', (parseInt(this.slider) * this.values.calcValue).toFixed(2))
+
+    }},
     data() {
       return {
         emissions: "",
-        slider: "0",
-        // sliderValues: [
-        //   {
-        //     label: this.emissions[0].sliderValues[0].label,
-        //     value: this.emissions[0].sliderValues[0].value
-        //   },
-        //   {
-        //     label: this.emissions[0].sliderValues[1].label,
-        //     value: this.emissions[0].sliderValues[1].value
-        //   },
-        //   {
-        //     label: this.emissions[0].sliderValues[2].label,
-        //     value: this.emissions[0].sliderValues[2].value
-        //   },
-        //   {
-        //     label: this.emissions[0].sliderValues[3].label,
-        //     value: this.emissions[0].sliderValues[3].value
-        //   }
-        //
-        // ],
-
-
-        // slider2Values: [
-        //   {
-        //     label: "low",
-        //     value: 0
-        //   },
-        //   {
-        //     label: "a little",
-        //     value: 23
-        //   },
-        //   {
-        //     label: "Average",
-        //     value: 46
-        //   },
-        //   {
-        //     label: "Above average",
-        //     value: 77
-        //   },
-        //   {
-        //     label: "a lot",
-        //     value: 100
-        //   }
-        // ]
+        slider: "0"
       };
     },
 

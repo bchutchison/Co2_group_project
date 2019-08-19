@@ -4,8 +4,9 @@
     <slider-grid :emissions="emissions" />
     <p v-for="emission in emissions">{{emission.name}}</p>
     <p>{{this.emissions[1].name}}</p> -->
-    <category v-for="emission in this.emissions"
-    :emission="emission"></category>
+    <category v-for="(emission, index) in this.emissions"
+    :emission="emission" :key="index"></category>
+    <p>{{this.totalValues}}</p>
   </div>
 </template>
 
@@ -13,13 +14,15 @@
 import Slider from "@/components/TestSlider.vue";
 import TestSlider from "@/components/TestSlider.vue";
 import Category from "@/components/Category.vue";
+import {eventBus} from "./main.js";
 
 export default {
   name: "app",
 
   data (){
     return {
-      emissions: []
+      emissions: [],
+      totalValues: 0
     }
   },
 
@@ -31,6 +34,10 @@ export default {
 
   mounted(){
     this.fetchData();
+    eventBus.$on('value-selected', (slider) => {
+      this.totalValues= 0
+      this.totalValues += parseInt(slider)
+    })
   },
 
   methods: {
