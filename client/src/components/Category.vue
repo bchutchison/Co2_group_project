@@ -21,9 +21,12 @@ export default {
   components: {
     'slider-incremental': SliderIncremental,
     'slider-smooth': SliderSmooth
-  }
-
-
+  },
+  // data() {
+  //   return {
+  //     slider: "0"
+  //   }
+  // }
 }
 
 

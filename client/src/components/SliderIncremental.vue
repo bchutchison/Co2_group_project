@@ -11,9 +11,9 @@
       ></slider>
     </div>
       <!-- remember to set v-model -->
-    <!-- <div class="output-wrapper">
-      <p>{{ (parseInt(slider) * this.emissions[2].calcValue + parseInt(slider2)).toFixed(2) }}</p>
-    </div> -->
+    <div class="output-wrapper">
+      <p>{{ (parseInt(slider)) }}</p>
+    </div>
 
   </div>
 </template>
@@ -32,54 +32,10 @@
     data() {
       return {
         emissions: "",
-        slider: "0",
-        sliderValues: [
-          {
-            label: "Hello",
-            value: "5"
-          },
-          {
-            label: this.emissions[0].sliderValues[1].label,
-            value: this.emissions[0].sliderValues[1].value
-          },
-          {
-            label: this.emissions[0].sliderValues[2].label,
-            value: this.emissions[0].sliderValues[2].value
-          },
-          {
-            label: this.emissions[0].sliderValues[3].label,
-            value: this.emissions[0].sliderValues[3].value
-          }
-
-        ],
-
-
-        // slider2Values: [
-        //   {
-        //     label: "low",
-        //     value: 0
-        //   },
-        //   {
-        //     label: "a little",
-        //     value: 23
-        //   },
-        //   {
-        //     label: "Average",
-        //     value: 46
-        //   },
-        //   {
-        //     label: "Above average",
-        //     value: 77
-        //   },
-        //   {
-        //     label: "a lot",
-        //     value: 100
-        //   }
-        // ]
-      };
-    },
-
-  };
+        slider: "0"
+    }
+  }
+}
 </script>
 
 <style lang="css" >

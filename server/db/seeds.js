@@ -95,18 +95,18 @@ db.emissions.insertMany(
         {
           name: "Yearly Electricity use (kWh)",
           isSmoothSlider: true,
-          calcValue: 0.309,
           sliderValues: {
+            calcValue: 0.309,
             min: "0",
-            max: "5000"
-          },
-          modifier: "0.75"
+            max: "5000",
+            modifier: "0.75"
+          }
         },
         {
           name: "Yearly Gas use (kWh)",
           isSmoothSlider: true,
-          calcValue: 0.185,
           sliderValues: {
+            calcValue: 0.185,
             min: "0",
             max: "30000"
           }
@@ -142,8 +142,8 @@ db.emissions.insertMany(
         {
           name: "Flights hours per year",
           isSmoothSlider: true,
-          calcValue: 134,
           sliderValues: {
+            calcValue: 134,
             min: "0",
             max: "50"
           }
@@ -151,8 +151,8 @@ db.emissions.insertMany(
         {
           name: "Car journey miles per year",
           isSmoothSlider: true,
-          calcValue: 0.43,
           sliderValues: {
+            calcValue: 0.43,
             min: "0",
             max: "25000"
           }
@@ -160,8 +160,8 @@ db.emissions.insertMany(
         {
           name: "Public transport miles per week",
           isSmoothSlider: true,
-          calcValue: 5.2,
           sliderValues: {
+            calcValue: 5.2,
             min: "0",
             max: "500"
           }

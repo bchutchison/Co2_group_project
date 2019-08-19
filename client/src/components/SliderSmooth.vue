@@ -11,9 +11,9 @@
     </div>
 
       <!-- remember to set v-model -->
-    <!-- <div class="output-wrapper">
-      <p>{{parseInt(slider)}}</p>
-    </div> -->
+    <div class="output-wrapper">
+      <p>{{(parseInt(slider) * this.values.calcValue).toFixed(2)}}</p>
+    </div>
 
   </div>
 </template>
