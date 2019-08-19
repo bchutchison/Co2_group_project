@@ -8,48 +8,48 @@ db.emissions.insertMany([
     sliderValues: [
       {
         label: "very little",
-        value: 71
+        value: "71"
       },
       {
         label: "average",
-        value: 46
+        value: "46"
       },
       {
         label: "above average",
-        value: 23
+        value: "23"
       },
       {
         label: "very often",
-        value: 0
+        value: "0"
       }
     ]
   },
   {
     name: "Locally sourced food",
-    sliderType: false, 
+    sliderType: false,
     sliderValues: [
       {
         label: "very little",
-        value: 0.5
+        value: "0.5"
       },
       {
         label: "average",
-        value: 0.3
+        value: "0.3"
       },
       {
         label: "above average",
-        value: 0.2
+        value: "0.2"
       },
       {
         label: "very often",
-        value: 0.1
+        value: "0.1"
       }
     ]
   },
   {
     name: "Electricity used",
     sliderType: true,
-    calcValue: "0.527",
+    calcValue: 0.527,
     bottomValue: "0",
     topValue: "5000",
     modifier: "0.75"
@@ -57,7 +57,7 @@ db.emissions.insertMany([
   {
     name: "Gas used",
     sliderType: true,
-    calcValue: "0.185",
+    calcValue: 0.185,
     bottomValue: "0",
     topValue: "30000",
   }

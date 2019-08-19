@@ -10,9 +10,5 @@ export default {
      headers: { 'Content-Type': 'application/json' }
    })
    .then(res => res.json());
- },
- deleteFootprint(id){
-   return fetch(${baseURL}${id}, { method: 'DELETE' })
- }
  }
 }

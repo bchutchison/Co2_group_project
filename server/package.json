@@ -8,7 +8,10 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongodb": "^3.3.0",
-    "server": "^1.0.19"
+    "router": "^1.3.3",
+    "server": "^1.0.19",
+    "vue": "^2.6.10",
+    "vue-router": "^3.1.2"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
@@ -17,7 +20,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "server:dev": "nodemon server.js",
-    "seeds": "mongo <./db/seeds.js"
+    "seeds": "mongo < ./db/seeds.js"
   },
   "author": "",
   "license": "ISC"
