@@ -79,9 +79,10 @@ h3 {
 }
 .calculationInfo {
   width: 60%;
-  border: 1px solid black;
   padding: 20px;
   margin-right: 50px;
+  background-color: white;
+  border-radius: 10px;
 
 }
 
