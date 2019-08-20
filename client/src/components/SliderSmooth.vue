@@ -11,8 +11,7 @@
       <!-- remember to set v-model -->
     <div class="output-wrapper">
       <p>{{(parseInt(slider) * this.values.calcValue).toFixed(2)}}</p>
-      <p>{{this.categoryName}}</p>
-      <p>{{this.indexnumber}}</p>
+
     </div>
 
   </div>
@@ -36,10 +35,7 @@
         const value = (parseInt(this.slider) * this.values.calcValue).toFixed(2);
         const object = {};
         object[nameInterpolated] = value;
-        // console.log(object);
-        // console.log(nameInterpolated);
         eventBus.$emit('value-selected', object);
-
     }},
     data() {
       return {

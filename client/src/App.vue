@@ -7,7 +7,7 @@
     <category v-for="(emission, index) in this.emissions"
     :emission="emission" :key="index"></category>
     <!-- <p>{{this.totalValues}}</p> -->
-    <p>{{totalValue}}</p>
+    <h1>{{totalC02Value}}</h1>
   </div>
 </template>
 
@@ -23,9 +23,8 @@ export default {
   data (){
     return {
       emissions: [],
-      totalValues: 0,
-      finalTotalValues: {}
-
+      finalTotalValues: {},
+      allValues: []
     }
   },
 
@@ -38,24 +37,20 @@ export default {
   mounted(){
     this.fetchData();
     eventBus.$on('value-selected', (sliderValue) => {
-      // console.log("In App.vue", Object.keys(sliderValue));
-      this.finalTotalValues[Object.keys(sliderValue)[0]] = Object.values(sliderValue)[0]
-      // console.log(this.finalTotalValues)
+      console.log("In App.vue", Object.keys(sliderValue));
+      const key = Object.keys(sliderValue)[0];
+      this.finalTotalValues[key] = Object.values(sliderValue)[0];
+      this.allValues = Object.values(this.finalTotalValues);
     })
   },
 
   computed: {
-    totalValue: function(){
-      var summedTotal = []
-      var summedTotal = Object.keys(this.finalTotalValues).map(val =>
-        this.finalTotalValues[val]);
-      }
-    //   const summedTotal = []
-    //   summedTotal.push(Object.values(this.finalTotalValues))
-    //   console.log(summedTotal);
-    // }
+    totalC02Value: function(){
+      return this.allValues.reduce( (total, value) => {
+        return total + parseInt(value)
+      }, 0)
+    }
   },
-
   methods: {
     fetchData(){
       fetch("http://localhost:3000/api/emissions")
