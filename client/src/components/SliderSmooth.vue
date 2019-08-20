@@ -87,6 +87,9 @@ h3 {
 
 .output-wrapper {
   border-style: 1px solid black;
-}
+  text-align: center;
+  color: #469120;
+  font-size: 30px;
+  }
 
 </style>
