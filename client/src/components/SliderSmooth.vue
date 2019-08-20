@@ -11,6 +11,7 @@
       <!-- remember to set v-model -->
     <div class="output-wrapper">
       <p>{{(parseInt(slider) * this.values.calcValue).toFixed(2)}}</p>
+      <p>{{this.categoryName}}</p>
     </div>
 
   </div>
@@ -26,7 +27,7 @@
       Slider
     },
 
-    props: ["values"],
+    props: ["values", "categoryName"],
 
     methods: {
     handleChange(){
