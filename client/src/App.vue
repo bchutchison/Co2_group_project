@@ -7,9 +7,10 @@
         <router-link :to="{ name: 'settings'}">Settings</router-link>
       </nav>
     </header>
-    <router-view id="view"></router-view>
-    <category v-for="(emission, index) in this.emissions"
-    :emission="emission" :key="index"></category>
+    <router-view id="view":emissions="emissions"></router-view>
+
+    <!-- <category v-for="(emission, index) in this.emissions"
+    :emission="emission" :key="index"></category> -->
     <h1>{{totalC02Value}}kg Co2</h1>
   </div>
 </template>
@@ -22,7 +23,6 @@ import {eventBus} from "./main.js";
 
 export default {
   name: "app",
-
   data (){
     return {
       emissions: [],
@@ -30,7 +30,6 @@ export default {
       allValues: []
     }
   },
-
   components: {
     'slider': Slider,
     'slider-grid': TestSlider,
