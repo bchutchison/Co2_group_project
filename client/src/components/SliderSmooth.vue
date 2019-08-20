@@ -5,7 +5,7 @@
       <slider
       :min="this.values.min"
       :max="this.values.max"
-      raising
+      
       v-model="slider" v-on:change="handleChange"></slider>
     </div>
 

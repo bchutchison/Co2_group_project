@@ -32,7 +32,7 @@
     data() {
       return {
         emissions: "",
-        slider: "0"
+        slider: this.values[0].value
     }
   }
 }
