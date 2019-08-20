@@ -26,7 +26,7 @@
       Slider
     },
 
-    props: ["values"],
+    props: ["values", "categoryName"],
 
     data() {
       return {

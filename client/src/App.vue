@@ -22,7 +22,9 @@ export default {
   data (){
     return {
       emissions: [],
-      totalValues: 0
+      totalValues: 0,
+      finalTotalValues: {}
+
     }
   },
 
@@ -34,6 +36,13 @@ export default {
 
   mounted(){
     this.fetchData();
+    eventBus.$on('value-selected', (slider) => {
+      this.totalValues= 0
+      this.totalValues += parseInt(slider)
+    })
+  },
+
+  computed(){
     eventBus.$on('value-selected', (slider) => {
       this.totalValues= 0
       this.totalValues += parseInt(slider)

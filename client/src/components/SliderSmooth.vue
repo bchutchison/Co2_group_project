@@ -12,6 +12,7 @@
     <div class="output-wrapper">
       <p>{{(parseInt(slider) * this.values.calcValue).toFixed(2)}}</p>
       <p>{{this.categoryName}}</p>
+      <p>{{this.indexnumber}}</p>
     </div>
 
   </div>
@@ -27,7 +28,7 @@
       Slider
     },
 
-    props: ["values", "categoryName"],
+    props: ["values", "categoryName", "indexnumber"],
 
     methods: {
     handleChange(){
