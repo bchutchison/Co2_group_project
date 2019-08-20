@@ -1,9 +1,8 @@
 <template lang="html">
   <div id="app">
-    <!-- <slider></slider>
-    <slider-grid :emissions="emissions" />
-    <p v-for="emission in emissions">{{emission.name}}</p>
-    <p>{{this.emissions[1].name}}</p> -->
+    <h1 class="main-heading">Carbon Calculator</h1>
+    <h2 class="main-heading">Reduce your Carbon Footprint</h2>
+
     <category v-for="(emission, index) in this.emissions"
     :emission="emission" :key="index"></category>
     <p>{{this.totalValues}}</p>
@@ -50,5 +49,17 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="css">
+body {
+  background-image: url("https://png2.kisspng.com/sh/fd56d0e81816e20939e8a06dfd953a20/L0KzQYm3VMAzN6R2fZH0aYP2gLBuTfNiepN0hp9vb3B3gMPwjwQue6Z4jNNybnHleb3wlQkudpJ5jeRqbD3ofsfwkv9vdZZzRdh4b4Tzgrr1lQMuPZJoStgBNEPnSYS3hsUvQWo6TakEN0C0RYO5V8I3PGc8UKoENj7zfri=/kisspng-carbon-footprint-sustainability-natural-environmen-footprints-5ac2f643d930f5.9955797015227264678896.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right;
+}
+
+.main-heading {
+  font-size: 48px;
+  font-family: arial;
+  color:#469120;
+}
 </style>

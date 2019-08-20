@@ -1,6 +1,7 @@
 <template>
   <div class="component-wrapper">
 
+      <h3>{{this.question}}</h3>
 
     <div class="slider-wrapper">
 <!-- slider values should be populated through the accessing empty emissions array  -->
@@ -26,7 +27,7 @@
       Slider
     },
 
-    props: ["values"],
+    props: ["values", "question"],
 
     data() {
       return {
@@ -37,7 +38,12 @@
 }
 </script>
 
-<style lang="css" >
+<style lang="css" scoped>
+
+h3 {
+  color: #469120;
+  font-family: Arial;
+}
 
 .component-wrapper {
  width: 60%;

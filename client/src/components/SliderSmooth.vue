@@ -1,6 +1,8 @@
 <template>
   <div class="component-wrapper">
 
+    <h3>{{this.question}}</h3>
+
     <div class="slider-wrapper">
       <slider
       :min="this.values.min"
@@ -26,7 +28,7 @@
       Slider
     },
 
-    props: ["values"],
+    props: ["values", "question"],
 
     methods: {
     handleChange(){
@@ -47,9 +49,19 @@
 
 .component-wrapper {
  width: 60%;
- border: 1px solid black;
+ border: 1px solid green;
+ color: darkgreen;
+ background: rgba(70, 145, 32, 0.5);
+ border-radius: 10px;
  padding: 20px;
  margin-right: 50px;
+}
+.calculationInfo {
+  width: 60%;
+  border: 1px solid black;
+  padding: 20px;
+  margin-right: 50px;
+
 }
 
 .output-wrapper {
