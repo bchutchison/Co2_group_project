@@ -83,6 +83,7 @@ h3 {
   margin-right: 50px;
   background-color: white;
   border-radius: 10px;
+  font-family: arial;
 
 }
 
