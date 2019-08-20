@@ -1,7 +1,15 @@
 <template>
   <div class="component-wrapper">
 
-      <h3>{{this.question}}</h3>
+      <h3>
+        {{this.question}}
+
+        <i class="material-icons" v-if="this.tooltip" v-on:mouseover="displayCalculationInfo" v-on:mouseleave="hideCalculationInfo">info</i>
+      </h3>
+
+      <p class= "calculationInfo" v-if="this.tooltip && shouldDisplayCalculationInfo">
+        {{ this.tooltip }}
+      </p>
 
     <div class="slider-wrapper">
 <!-- slider values should be populated through the accessing empty emissions array  -->
@@ -27,12 +35,24 @@
       Slider
     },
 
-    props: ["values", "question"],
+    props: ["values", "question", "tooltip"],
+
+    methods: {
+      displayCalculationInfo() {
+        console.log("mouse enter")
+        this.shouldDisplayCalculationInfo = true;
+      },
+      hideCalculationInfo(){
+        console.log("mouse leave")
+        this.shouldDisplayCalculationInfo = false;
+      }
+    },
 
     data() {
       return {
         emissions: "",
-        slider: this.values[0].value
+        slider: this.values[0].value,
+        shouldDisplayCalculationInfo: false
     }
   }
 }
@@ -47,9 +67,19 @@ h3 {
 
 .component-wrapper {
  width: 60%;
- border: 1px solid black;
+ border: 1px solid green;
+ color: darkgreen;
+ background: rgba(70, 145, 32, 0.5);
+ border-radius: 10px;
  padding: 20px;
  margin-right: 50px;
+}
+.calculationInfo {
+  width: 60%;
+  border: 1px solid black;
+  padding: 20px;
+  margin-right: 50px;
+
 }
 
 .output-wrapper {

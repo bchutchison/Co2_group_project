@@ -3,11 +3,8 @@
     <h4>{{emission.category}}</h4>
       <div class="question-topic">
         <ul v-for="(data, index) in emission.data" :key="index">
-         <li><i class="material-icons" v-on:mouseover="displayCalculationInfo" v-on:mouseleave="hideCalculationInfo">info</i></li>
-
-         <p class= "calculationInfo" v-if="shouldDisplayCalculationInfo">{{ data.calculationInfo }}</p>
-         <slider-incremental :question="data.name" :values="data.sliderValues" v-if="!data.isSmoothSlider">Test If v-if works</slider-incremental>
-         <slider-smooth v-else :values="data.sliderValues">Test If v-if works</slider-smooth>
+         <slider-incremental :tooltip="data.calculationInfo" :question="data.name" :values="data.sliderValues" v-if="!data.isSmoothSlider">Test If v-if works</slider-incremental>
+         <slider-smooth v-else :tooltip="data.calculationInfo" :question="data.name" :values="data.sliderValues">Test If v-if works</slider-smooth>
        </ul>
       </div>
   </div>
@@ -20,25 +17,9 @@ import SliderSmooth from './SliderSmooth.vue'
 export default {
   name: "category",
   props: ["emission"],
-  data: function() {
-    return {
-      shouldDisplayCalculationInfo: false
-    };
-  },
   components: {
     'slider-incremental': SliderIncremental,
     'slider-smooth': SliderSmooth
-  },
-  methods: {
-    displayCalculationInfo() {
-      console.log("mouse enter")
-      this.shouldDisplayCalculationInfo = true;
-    },
-    hideCalculationInfo(){
-      console.log("mouse leave")
-      this.shouldDisplayCalculationInfo = false;
-
-    }
   }
 }
 

@@ -1,7 +1,15 @@
 <template>
   <div class="component-wrapper">
 
-    <h3>{{this.question}}</h3>
+    <h3>
+      {{this.question}}
+
+      <i class="material-icons" v-if="this.tooltip" v-on:mouseover="displayCalculationInfo" v-on:mouseleave="hideCalculationInfo">info</i>
+    </h3>
+
+    <p class= "calculationInfo" v-if="this.tooltip && shouldDisplayCalculationInfo">
+      {{ this.tooltip }}
+    </p>
 
     <div class="slider-wrapper">
       <slider
@@ -28,17 +36,26 @@
       Slider
     },
 
-    props: ["values", "question"],
+    props: ["values", "question", "tooltip"],
 
     methods: {
-    handleChange(){
-      eventBus.$emit('value-selected', (parseInt(this.slider) * this.values.calcValue).toFixed(2))
-
-    }},
+      handleChange(){
+        eventBus.$emit('value-selected', (parseInt(this.slider) * this.values.calcValue).toFixed(2))
+      },
+      displayCalculationInfo() {
+        console.log("mouse enter")
+        this.shouldDisplayCalculationInfo = true;
+      },
+      hideCalculationInfo(){
+        console.log("mouse leave")
+        this.shouldDisplayCalculationInfo = false;
+      }
+    },
     data() {
       return {
         emissions: "",
-        slider: "0"
+        slider: "0",
+        shouldDisplayCalculationInfo: false
       };
     },
 
@@ -46,6 +63,10 @@
 </script>
 
 <style lang="css" >
+h3 {
+  color: #469120;
+  font-family: Arial;
+}
 
 .component-wrapper {
  width: 60%;
