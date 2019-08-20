@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Main from '@/views/Main';
+import Home from '@/views/Home';
 import Stats from '@/views/Stats';
 import Settings from '@/views/Settings';
 
@@ -10,8 +10,8 @@ const router = new Router({
   routes: [
     {
       path: '',
-      name: 'main',
-      component: Main
+      name: 'home',
+      component: Home
     },
     {
       path: '/stats',

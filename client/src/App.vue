@@ -1,12 +1,15 @@
 <template lang="html">
   <div id="app">
-    <!-- <slider></slider>
-    <slider-grid :emissions="emissions" />
-    <p v-for="emission in emissions">{{emission.name}}</p>
-    <p>{{this.emissions[1].name}}</p> -->
+    <header>
+      <nav>
+        <router-link :to="{ name: 'home'}">Home</router-link>
+        <router-link :to="{ name: 'stats'}">Stats</router-link>
+        <router-link :to="{ name: 'settings'}">Settings</router-link>
+      </nav>
+    </header>
+    <router-view id="view"></router-view>
     <category v-for="(emission, index) in this.emissions"
     :emission="emission" :key="index"></category>
-    <!-- <p>{{this.totalValues}}</p> -->
     <h1>{{totalC02Value}}kg Co2</h1>
   </div>
 </template>
