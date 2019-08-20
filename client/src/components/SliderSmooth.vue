@@ -10,7 +10,7 @@
 
       <!-- remember to set v-model -->
     <div class="output-wrapper">
-      <p>{{(parseInt(slider) * this.values.calcValue).toFixed(2)}}</p>
+      <p>{{(parseInt(slider) * this.values.calcValue).toFixed(2)}}kg Co2</p>
 
     </div>
 
