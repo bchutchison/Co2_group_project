@@ -42,12 +42,12 @@ export default {
     })
   },
 
-  computed(){
-    eventBus.$on('value-selected', (slider) => {
-      this.totalValues= 0
-      this.totalValues += parseInt(slider)
-    })
-  },
+  // computed: {
+  //   eventBus.$on('value-selected', (slider) => {
+  //     this.totalValues= 0
+  //     this.totalValues += parseInt(slider)
+  //   })
+  // },
 
   methods: {
     fetchData(){

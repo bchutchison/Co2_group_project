@@ -31,8 +31,11 @@
     props: ["values", "categoryName", "indexnumber"],
 
     methods: {
-    handleChange(){
-      eventBus.$emit('value-selected', (parseInt(this.slider) * this.values.calcValue).toFixed(2))
+      handleChange(){
+        const nameInterpolated = `${this.categoryName + this.indexnumber}`;
+        const value = (parseInt(this.slider) * this.values.calcValue).toFixed(2);
+        const object = {nameInterpolated: value};
+        eventBus.$emit('value-selected', object);
 
     }},
     data() {
