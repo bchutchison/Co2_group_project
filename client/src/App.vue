@@ -6,7 +6,8 @@
     <p>{{this.emissions[1].name}}</p> -->
     <category v-for="(emission, index) in this.emissions"
     :emission="emission" :key="index"></category>
-    <p>{{this.totalValues}}</p>
+    <!-- <p>{{this.totalValues}}</p> -->
+    <p>{{totalValue}}</p>
   </div>
 </template>
 
@@ -36,18 +37,24 @@ export default {
 
   mounted(){
     this.fetchData();
-    eventBus.$on('value-selected', (slider) => {
-      this.totalValues= 0
-      this.totalValues += parseInt(slider)
+    eventBus.$on('value-selected', (sliderValue) => {
+      // console.log("In App.vue", Object.keys(sliderValue));
+      this.finalTotalValues[Object.keys(sliderValue)[0]] = Object.values(sliderValue)[0]
+      // console.log(this.finalTotalValues)
     })
   },
 
-  // computed: {
-  //   eventBus.$on('value-selected', (slider) => {
-  //     this.totalValues= 0
-  //     this.totalValues += parseInt(slider)
-  //   })
-  // },
+  computed: {
+    totalValue: function(){
+      var summedTotal = []
+      var summedTotal = Object.keys(this.finalTotalValues).map(val =>
+        this.finalTotalValues[val]);
+      }
+    //   const summedTotal = []
+    //   summedTotal.push(Object.values(this.finalTotalValues))
+    //   console.log(summedTotal);
+    // }
+  },
 
   methods: {
     fetchData(){

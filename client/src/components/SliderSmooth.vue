@@ -34,7 +34,10 @@
       handleChange(){
         const nameInterpolated = `${this.categoryName + this.indexnumber}`;
         const value = (parseInt(this.slider) * this.values.calcValue).toFixed(2);
-        const object = {nameInterpolated: value};
+        const object = {};
+        object[nameInterpolated] = value;
+        // console.log(object);
+        // console.log(nameInterpolated);
         eventBus.$emit('value-selected', object);
 
     }},
