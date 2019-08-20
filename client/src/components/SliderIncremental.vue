@@ -6,7 +6,6 @@
 <!-- slider values should be populated through the accessing empty emissions array  -->
       <slider
       :values="values"
-      raising
       v-model="slider"
       ></slider>
     </div>
@@ -41,7 +40,6 @@
 <style lang="css" >
 
 .component-wrapper {
- color: red;
  width: 60%;
  border: 1px solid black;
  padding: 20px;
@@ -50,7 +48,6 @@
 
 .output-wrapper {
   border-style: 1px solid black;
-  color: red;
 }
 
 </style>
