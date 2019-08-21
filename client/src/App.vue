@@ -1,11 +1,19 @@
 <template lang="html">
   <div id="app">
+    <header>
+      <nav>
+        <router-link :to="{ name: 'home'}">Home</router-link>
+        <router-link :to="{ name: 'stats'}">Stats</router-link>
+        <router-link :to="{ name: 'settings'}">Settings</router-link>
+      </nav>
+    </header>
     <h1 class="main-heading">Carbon Calculator</h1>
     <h2 class="main-heading">Reduce your Carbon Footprint</h2>
+    <router-view id="view":emissions="emissions"></router-view>
 
-    <category v-for="(emission, index) in this.emissions"
-    :emission="emission" :key="index"></category>
-    <p>{{this.totalValues}}</p>
+    <!-- <category v-for="(emission, index) in this.emissions"
+    :emission="emission" :key="index"></category> -->
+    <h1>{{totalC02Value}}kg Co2</h1>
   </div>
 </template>
 
@@ -17,14 +25,13 @@ import {eventBus} from "./main.js";
 
 export default {
   name: "app",
-
   data (){
     return {
       emissions: [],
-      totalValues: 0
+      finalTotalValues: {},
+      allValues: []
     }
   },
-
   components: {
     'slider': Slider,
     'slider-grid': TestSlider,
@@ -33,12 +40,21 @@ export default {
 
   mounted(){
     this.fetchData();
-    eventBus.$on('value-selected', (slider) => {
-      this.totalValues= 0
-      this.totalValues += parseInt(slider)
+    eventBus.$on('value-selected', (sliderValue) => {
+      console.log("In App.vue", Object.keys(sliderValue));
+      const key = Object.keys(sliderValue)[0];
+      this.finalTotalValues[key] = Object.values(sliderValue)[0];
+      this.allValues = Object.values(this.finalTotalValues);
     })
   },
 
+  computed: {
+    totalC02Value: function(){
+      return this.allValues.reduce( (total, value) => {
+        return total + parseInt(value)
+      }, 0)
+    }
+  },
   methods: {
     fetchData(){
       fetch("http://localhost:3000/api/emissions")

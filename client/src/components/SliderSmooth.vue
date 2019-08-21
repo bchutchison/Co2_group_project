@@ -20,7 +20,8 @@
 
       <!-- remember to set v-model -->
     <div class="output-wrapper">
-      <p>{{(parseInt(slider) * this.values.calcValue).toFixed(2)}}</p>
+      <p>{{(parseInt(slider) * this.values.calcValue).toFixed(2)}}kg Co2</p>
+
     </div>
 
   </div>
@@ -36,12 +37,16 @@
       Slider
     },
 
-    props: ["values", "question", "tooltip"],
+    props: ["values", "categoryName", "indexnumber", "question", "tooltip"],
 
     methods: {
       handleChange(){
-        eventBus.$emit('value-selected', (parseInt(this.slider) * this.values.calcValue).toFixed(2))
-      },
+        const nameInterpolated = `${this.categoryName + this.indexnumber}`;
+        const value = (parseInt(this.slider) * this.values.calcValue).toFixed(2);
+        const object = {};
+        object[nameInterpolated] = value;
+        eventBus.$emit('value-selected', object);
+    },
       displayCalculationInfo() {
         console.log("mouse enter")
         this.shouldDisplayCalculationInfo = true;
