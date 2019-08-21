@@ -78,9 +78,9 @@ h3 {
  border: 1px solid green;
  color: darkgreen;
  background: rgba(70, 145, 32, 0.5);
- border-radius: 10px;
- padding: 20px;
- margin-right: 50px;
+ border-radius: 20px;
+ margin-bottom: 4em;
+ margin-left: 2em;
 }
 .calculationInfo {
   width: 60%;

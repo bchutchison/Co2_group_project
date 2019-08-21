@@ -81,6 +81,8 @@ h3 {
  border-radius: 10px;
  padding: 20px;
  margin-right: 50px;
+ margin-bottom: 4em;
+ margin-left: 2em;
 }
 .calculationInfo {
   width: 60%;

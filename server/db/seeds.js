@@ -104,7 +104,7 @@ db.emissions.insertMany(
           }
         },
         {
-          name: "Gas - What is Your Yearly Gas Use (kWh)",
+          name: "Gas - What is Your Yearly Gas Use (kWh)?",
           calculationInfo: "Gas consumption is generally measured in units of volume, and this is converted on gas bills into units of energy i.e. kilowatt-hours (kWh) - see Sources page.\nTo make an accurate calculation of the CO2 generated, you can enter the annual kWh used (if you know this), or you can calculate it from your bills. To calculate from your bills, first select how your gas is measured. If your bills don't say what the units are, you can probably find the units on the meter.\nRecently installed meters measure gas in cubic metres (m3), but older meters measure in hundreds of cubic feet - or you may have the kWh already calculated.\nEnter the meter reading at the end of the last quarter from the latest bill and then the reading from 12 months before. ",
           isSmoothSlider: true,
           sliderValues: {

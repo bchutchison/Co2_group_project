@@ -6,14 +6,14 @@
         <router-link :to="{ name: 'stats'}">Stats</router-link>
         <router-link :to="{ name: 'settings'}">Settings</router-link>
       </nav>
-    </header>
-    <h1 class="main-heading">Carbon Calculator</h1>
+    </header> <h5>{{totalC02Value}}kg Co2</h5>
+
+     <h1 class="main-heading">Carbon Calculator</h1>
     <h2 class="main-heading">Reduce your Carbon Footprint</h2>
     <router-view id="view":emissions="emissions"></router-view>
 
     <!-- <category v-for="(emission, index) in this.emissions"
     :emission="emission" :key="index"></category> -->
-    <h1>{{totalC02Value}}kg Co2</h1>
   </div>
 </template>
 
@@ -73,9 +73,20 @@ body {
   background-position: right;
 }
 
+
+
+counter{
+  background-image: url "https://cdn.onlinewebfonts.com/svg/img_541271.png";
+  margin-top: 2em;
+  /* attachment: fixed; */
+  top: 0;
+  font-size: 48px;
+  position: sticky;
+  }
 .main-heading {
   font-size: 48px;
   font-family: arial;
   color:#469120;
+  padding-left: 60px;
 }
 </style>
