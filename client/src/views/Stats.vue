@@ -1,12 +1,17 @@
 <template lang="html">
   <div id="">
-
+    <ChartDoughnut />
   </div>
 </template>
 
 <script>
+import ChartDoughnut from '@/components/Chart.vue';
+
 export default {
-  name: 'stats'
+  name: 'stats',
+  components: {
+    ChartDoughnut
+  }
 }
 </script>
 
