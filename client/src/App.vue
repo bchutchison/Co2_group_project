@@ -13,7 +13,7 @@
 
     <!-- <category v-for="(emission, index) in this.emissions"
     :emission="emission" :key="index"></category> -->
-    <h1>{{totalC02Value}}kg Co2</h1>
+    <h1>{{totalC02Value}}kg CO2</h1>
   </div>
 </template>
 

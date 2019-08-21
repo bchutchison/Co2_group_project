@@ -3,8 +3,8 @@
     <h4>{{emission.category}}</h4>
       <div class="question-topic">
         <ul v-for="(data, index) in emission.data">
-         <slider-incremental :tooltip="data.calculationInfo" :question="data.name" :values="data.sliderValues"  :categoryName="emission.category" v-if="!data.isSmoothSlider" :indexnumber="index">Test If v-if works</slider-incremental>
-         <slider-smooth v-else :tooltip="data.calculationInfo" :question="data.name" :values="data.sliderValues"  :categoryName="emission.category" :indexnumber="index">Test If v-if works</slider-smooth>
+         <slider-incremental :tooltip="data.calculationInfo" :question="data.name" :values="data.sliderValues"  :categoryName="emission.category" v-if="!data.isSmoothSlider" :indexnumber="index"></slider-incremental>
+         <slider-smooth v-else :tooltip="data.calculationInfo" :question="data.name" :values="data.sliderValues"  :categoryName="emission.category" :indexnumber="index"></slider-smooth>
         </ul>
       </div>
   </div>

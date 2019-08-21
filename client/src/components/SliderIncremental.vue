@@ -19,7 +19,7 @@
     </div>
       <!-- remember to set v-model -->
     <div class="output-wrapper">
-      <p>{{ (parseInt(slider)) }}kg Co2</p>
+      <p>{{ (parseInt(slider)) }}kg CO2</p>
     </div>
 
   </div>
