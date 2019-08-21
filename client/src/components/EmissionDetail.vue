@@ -4,20 +4,27 @@
       <li><h3>{{emission.category}}</h3></li>
       <ul v-for="item in emission.data">
         <form v-on:submit="handleSubmit">
-          <label for="name">Title:{{item.name}}</label>
-          <input type="text" name="name" v-model="name" />
-          <br>
-          <label for="sliderType">Slider Type:{{item.isSmoothSlider}}</label>
-          <input type="text" name="sliderType" v-model="sliderType" />
+          <li>Title: {{item.name}}</li>
+          <li>Slider Type: {{item.isSmoothSlider}}</li>
           <ul v-if="item.isSmoothSlider">
-            <li>Calculation Value: {{item.sliderValues.calcValue}}</li>
-            <li>Minimum Value: {{item.sliderValues.min}}</li>
-            <li>Maximum Value: {{item.sliderValues.max}}</li>
-            <li>Modifier: {{item.sliderValues.modifier}}</li>
+            <label for="calcValue">Calculation Value: {{item.sliderValues.calcValue}}</label>
+            <input type="text" name="calcValue" v-model="calcValue" />
+            <br>
+            <label for="min">Calculation Value: {{item.sliderValues.min}}</label>
+            <input type="text" name="min" v-model="min" />
+            <br>
+            <label for="max">Maximum Value: {{item.sliderValues.max}}</label>
+            <input type="text" name="max" v-model="max" />
+            <br>
+            <label for="modifier">Modifer: {{item.sliderValues.modifier}}</label>
+            <input type="text" name="modifier" v-model="modifier" />
           </ul>
-            <ul v-else v-for="value in item.sliderValues">{{value.label}}: {{value.value}}
+            <ul v-else v-for="(value, index) in item.sliderValues" key="index">
+              <label for="sliderLabel">Label: {{value.label}}</label>
+              <label for="sliderValue"> Value: {{value.value}}</label>
+              <input type="text" name="sliderValue" v-model="sliderValue" />
             </ul>
-        <input type="submit" name="submit" value="Update">
+        <input type="submit" name="submit" value="save">
       </form>
       <hr>
     </ul>
@@ -36,8 +43,8 @@ export default {
       var str = item.name;
       console.log(str.split('-')[0]);
     },
-    handleSubmit(){
-
+    handleSubmit: function(){
+			FootprintService.updateBooking(this.emissions)
     }
   }
 }
