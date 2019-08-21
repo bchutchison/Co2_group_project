@@ -9,7 +9,7 @@
     </header>
     <h1 class="main-heading">Carbon Calculator</h1>
     <h2 class="main-heading">Reduce your Carbon Footprint</h2>
-    <router-view id="view":emissions="emissions"></router-view>
+    <router-view id="view":emissions="emissions" :finalTotalValues="finalTotalValues"></router-view>
 
     <!-- <category v-for="(emission, index) in this.emissions"
     :emission="emission" :key="index"></category> -->

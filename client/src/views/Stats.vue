@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="">
-    <ChartDoughnut />
+    <ChartDoughnut :finalTotalValues="finalTotalValues"/>
   </div>
 </template>
 
@@ -9,6 +9,7 @@ import ChartDoughnut from '@/components/Chart.vue';
 
 export default {
   name: 'stats',
+  props: ["finalTotalValues"],
   components: {
     ChartDoughnut
   }
