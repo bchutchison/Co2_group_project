@@ -74,20 +74,20 @@ h3 {
 }
 
 .component-wrapper {
- width: 60%;
+ /* width: 60%; */
  border: 1px solid green;
  color: darkgreen;
  background: rgba(70, 145, 32, 0.5);
  border-radius: 10px;
  padding: 20px;
- margin-right: 50px;
+ /* margin-right: 50px; */
  margin-bottom: 4em;
- margin-left: 2em;
+ /* margin-left: 2em; */
 }
 .calculationInfo {
-  width: 60%;
+  width: 100%;
   padding: 20px;
-  margin-right: 50px;
+  /* margin-right: 50px; */
   background-color: white;
   border-radius: 10px;
   font-family: arial;
