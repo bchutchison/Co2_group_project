@@ -35,7 +35,7 @@ export default {
           hoverBackgroundColor: ["#fbd2cd", "#fbd2cd", "#fbd2cd", "#fef5c9", "#fef5c9", "#fef5c9", "#d1e3f7", "#d1e3f7", "#d1e3f7"]
         }
       ],
-      labels: ["Housing Q.1", "Housing Q.2",  "Housing Q.3",  "Travel Q.1", "Travel Q.2", "Travel Q.3", "Food Q.1", "Food Q.2", "Food Q.3"],
+      labels: ["Food Q.1", "Food Q.2", "Food Q.3", "Housing Q.1", "Housing Q.2",  "Housing Q.3",  "Travel Q.1", "Travel Q.2", "Travel Q.3" ],
       option: {}
     };
   }
