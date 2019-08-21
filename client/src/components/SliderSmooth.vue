@@ -99,4 +99,8 @@ h3 {
   font-size: 30px;
   }
 
+  .slider__track {
+    color: red;
+  }
+
 </style>
