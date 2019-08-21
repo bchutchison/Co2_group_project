@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="emission-detail">
     <ul v-for="emission in emissions">
-      <li>{{emission.category}}</li>
+      <li><h3>{{emission.category}}</h3></li>
       <ul v-for="item in emission.data">
         <li>Title: {{item.name}}</li>
         <li>Slider Type:{{item.isSmoothSlider}}</li>
@@ -15,7 +15,7 @@
             <ul v-else v-for="value in item.sliderValues">{{value.label}}: {{value.value}}
             </ul>
         </div>
-        <button type="button" name="button">Edit</button>
+        <button type="button" name="button">Edit Data</button>
         <hr>
       </ul>
       <br>
