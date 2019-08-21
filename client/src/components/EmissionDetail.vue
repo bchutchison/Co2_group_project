@@ -3,6 +3,7 @@
     <ul v-for="emission in emissions">
       <li><h3>{{emission.category}}</h3></li>
       <ul v-for="item in emission.data">
+        <form v-on:submit="handleSubmit">
         <li>Title: {{item.name}}</li>
         <li>Slider Type:{{item.isSmoothSlider}}</li>
         <div>
@@ -15,9 +16,10 @@
             <ul v-else v-for="value in item.sliderValues">{{value.label}}: {{value.value}}
             </ul>
         </div>
-        <button type="button" name="button">Edit Data</button>
-        <hr>
-      </ul>
+        <input type="submit" name="submit" value="Update">
+      </form>
+      <hr>
+    </ul>
       <br>
       <hr>
     </ul>
@@ -32,6 +34,9 @@ export default {
     splitString() {
       var str = item.name;
       console.log(str.split('-')[0]);
+    },
+    handleSubmit(){
+
     }
   }
 }
