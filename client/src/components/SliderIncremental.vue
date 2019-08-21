@@ -69,7 +69,7 @@
 <style lang="css" scoped>
 
 h3 {
-  color: #469120;
+  color: black;
   font-family: Arial;
 }
 
