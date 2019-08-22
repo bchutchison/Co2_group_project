@@ -1,10 +1,10 @@
 <template lang="html">
   <div id="app">
     <header>
-      <nav>
-        <router-link :to="{ name: 'home'}">Home</router-link>
-        <router-link :to="{ name: 'stats'}">Stats</router-link>
-        <router-link :to="{ name: 'settings'}">Settings</router-link>
+      <nav class="routers">
+        <router-link class="routers" :to="{ name: 'home'}">Home</router-link>
+        <router-link class="routers" :to="{ name: 'stats'}">Stats</router-link>
+        <router-link class="routers" :to="{ name: 'settings'}">Settings</router-link>
       </nav>
     </header>
     <h1 class="main-heading">Carbon Calculator</h1>
@@ -77,5 +77,13 @@ body {
   font-size: 48px;
   font-family: arial;
   color:#469120;
+}
+
+.routers {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  padding: 10px;
+  font-family: arial;
 }
 </style>
