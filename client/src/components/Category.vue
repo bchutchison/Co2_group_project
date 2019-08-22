@@ -1,10 +1,10 @@
 <template lang="html">
-  <div>
+  <div class="category">
     <h4>{{emission.category}}</h4>
       <div class="question-topic">
         <ul v-for="(data, index) in emission.data">
-         <slider-incremental :tooltip="data.calculationInfo" :question="data.name" :values="data.sliderValues"  :categoryName="emission.category" v-if="!data.isSmoothSlider" :indexnumber="index">Test If v-if works</slider-incremental>
-         <slider-smooth v-else :tooltip="data.calculationInfo" :question="data.name" :values="data.sliderValues"  :categoryName="emission.category" :indexnumber="index">Test If v-if works</slider-smooth>
+         <slider-incremental :tooltip="data.calculationInfo" :question="data.name" :values="data.sliderValues"  :categoryName="emission.category" v-if="!data.isSmoothSlider" :indexnumber="index"></slider-incremental>
+         <slider-smooth v-else :tooltip="data.calculationInfo" :question="data.name" :values="data.sliderValues"  :categoryName="emission.category" :indexnumber="index"></slider-smooth>
         </ul>
       </div>
   </div>
@@ -36,8 +36,17 @@ h4 {
   font-family: arial;
   color: #469120;
   font-size: 25px;
+  padding-left: 60px;
 }
-
+.category {
+  border-style: solid;
+  border-color: green;
+  border-radius: 20px 20px;
+  width: 60%;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-bottom: 30px;
+}
 
 .popup .popuptext::after {
   content: "";

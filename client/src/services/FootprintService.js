@@ -10,5 +10,13 @@ export default {
      headers: { 'Content-Type': 'application/json' }
    })
    .then(res => res.json());
+ },
+ updateFootprint(payload) {
+   return fetch(baseURL, {
+     method: 'PUT',
+     body: JSON.stringify(payload),
+     headers: { 'Content-Type': 'application/json' }
+   })
+   .then(res => res.json());
  }
 }

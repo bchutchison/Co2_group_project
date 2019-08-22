@@ -96,7 +96,7 @@
   };
 </script>
 
-<style lang="css" >
+<style lang="css" scoped>
 
 .component-wrapper {
  color: red;
