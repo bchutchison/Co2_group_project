@@ -46,6 +46,7 @@ h4 {
   padding-left: 35px;
   padding-right: 35px;
   margin-bottom: 30px;
+  margin-left: 30px;
 }
 
 .popup .popuptext::after {

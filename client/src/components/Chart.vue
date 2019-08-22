@@ -41,3 +41,9 @@ export default {
   }
 };
 </script>
+
+<style lang="css">
+  h2 {
+    text-align: center;
+  }
+</style>
