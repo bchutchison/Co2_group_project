@@ -7,13 +7,18 @@
         <router-link :to="{ name: 'settings'}">Settings</router-link>
       </nav>
     </header>
-    <h1 class="main-heading">Carbon Calculator</h1>
-    <h2 class="main-heading">Reduce your Carbon Footprint</h2>
+
+    <div class="counter-wrapper">
+      <div class="">
+        <h1 class="main-heading">Carbon Calculator</h1>
+        <h2 class="main-heading">Reduce your Carbon Footprint</h2>
+      </div>
+      <div class="counter"><h5>{{totalC02Value}}kg Co2</h5></div>
+    </div>
     <router-view id="view":emissions="emissions"></router-view>
 
     <!-- <category v-for="(emission, index) in this.emissions"
     :emission="emission" :key="index"></category> -->
-    <h1>{{totalC02Value}}kg CO2</h1>
   </div>
 </template>
 
@@ -73,9 +78,42 @@ body {
   background-position: right;
 }
 
+
+
+.counter{
+  background-image: url("https://cdn.onlinewebfonts.com/svg/img_541271.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 275px;
+  width: 275px;
+  margin-top: 2em;
+  /* attachment: fixed; */
+  top: 0;
+  left: 825px;
+  font-size: 48px;
+  position: fixed;
+  z-index: 100;
+}
+
+.counter h5 {
+  color: #469120;
+  font-family: Arial;
+}
+
 .main-heading {
   font-size: 48px;
   font-family: arial;
   color:#469120;
+  padding-left: 60px;
+}
+
+.counter-wrapper {
+  display: flex;
+  align-items: center;
 }
 </style>

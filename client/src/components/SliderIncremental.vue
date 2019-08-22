@@ -69,24 +69,24 @@
 <style lang="css" scoped>
 
 h3 {
-  color: #469120;
+  color: black;
   font-family: Arial;
 }
 
 .component-wrapper {
- width: 60%;
+ /* width: 60%; */
  border: 1px solid green;
  color: darkgreen;
  background: rgba(70, 145, 32, 0.5);
- border-radius: 10px;
- padding: 20px;
- margin-right: 50px;
+ border-radius: 20px;
+ margin-bottom: 4em;
+ /* margin-left: 2em; */
 }
 .calculationInfo {
-  width: 60%;
+  width: 100%;
   border: 1px solid black;
   padding: 20px;
-  margin-right: 50px;
+  /* margin-right: 50px; */
 
 }
 
