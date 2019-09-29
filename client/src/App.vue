@@ -3,15 +3,15 @@
     <div class="nav-container">
     <header>
       <nav class="routers">
-        <router-link class="routers" :to="{ name: 'home'}">Home</router-link>
-        <router-link class="routers" :to="{ name: 'stats'}">Stats</router-link>
-        <router-link class="routers" :to="{ name: 'settings'}">Settings</router-link>
+        <router-link class="routers" :to="{ name: 'home'}">HOME</router-link>
+        <router-link class="routers" :to="{ name: 'stats'}">STATS</router-link>
+        <router-link class="routers" :to="{ name: 'settings'}">SETTINGS</router-link>
       </nav>
     </header>
 
     <div class="counter-wrapper">
       <div class="header-container">
-        <h1 class="main-heading">Carbon Calculator</h1>
+        <h1 class="main-title">Carbon Calculator</h1>
         <h1 class="main-heading">Reduce your Carbon Footprint</h1>
       </div>
       <div class="counter"><h5>{{totalC02Value}}kg CO2</h5></div>
@@ -140,7 +140,7 @@ body {
   width: 100%;
   text-align: center;
   font-size: 24px;
-  padding: 10px;
+  padding: 20px;
   font-family: arial;
 }
 
